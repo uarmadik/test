@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test aplication</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+	<div class="wrap">
+		<section class="form-wrap"><h1></h1>
+			<input type="checkbox" id="checkbox-form-btn">
+			<label for="checkbox-form-btn" id="btn-formview"></label>
+
+			<form action="#" enctype="multipart/form-data">
+
+				<input type="text" name="first-name" placeholder="First Name" id="first-name"></br></br>
+
+				<input type="text" name="second-name" placeholder="Second Name" id="second-name"></br></br>
+
+				<input type="tel" name="phone-number" placeholder="Phone number" id="phone-number"></br></br>
+
+				<textarea rows="10" cols="50" placeholder="About" id="about-info"></textarea></br></br>
+				<label>Add image:</br>
+					<input type="file" name="image" id="upload-image" onchange="loadFile(event)">
+				</label></br></br>
+				<input type="button" value="Create something like CV" onclick="write_info()">
+				<input type="reset">
+			</form>
+		</section>
+		<article class="cv">
+			<h1>Something like CV</h1>
+			<div class="cv-wrap">
+				<div class="image-part">
+					<img src="#" alt="CV image" width="180" id="image">
+					<p>Path to image:</p>
+					<p id="path-to-image"></p>
+				</div>
+				<div class="personal-info">
+					<p>First Name:</p>
+					<p id="first_name"></p></br>
+					<p>Second Name:</p>
+					<p id="second_name"></p></br>
+					<p>Phone number:</p>
+					<p id="phone_number"></p></br>
+					<p>About:</p>
+					<p id="about_info"></p>
+				</div>
+				
+			</div>
+		</article>		
+
+	</div>
+	<script src="js/script.js"></script>
+</body>
+</html>

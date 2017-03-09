@@ -1,0 +1,148 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font: normal 1em sans-serif;
+}
+
+.wrap {
+	width: 100%;
+	max-width: 1000px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+	.form-wrap {
+		margin: 0 auto;
+		width: 468px;
+	}
+	.form-wrap form {
+		width: 468px;
+		min-width: 320px;
+		position: absolute;
+		top: -550px;
+		transition: all .5s;
+		background-color: #dae8fb;
+		padding: 10px;
+	}
+	.form-wrap #btn-formview {
+		display: block;
+		width: 468px;
+		height: 24px;
+		background-color: #3088b9;
+		background-image: url('https://image.flaticon.com/icons/svg/133/133871.svg');
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: relative;
+		z-index: 1;
+	}
+	.form-wrap #btn-formview:hover {
+		background-color: #73b0d2;
+	}
+	#checkbox-form-btn {
+		display: none;
+
+	}
+	#checkbox-form-btn:checked ~ #btn-formview {
+		background-image: url('https://image.flaticon.com/icons/svg/133/133872.svg');
+	}
+	#checkbox-form-btn:checked ~ form {
+		top: 30px;
+	}
+
+	.form-wrap input,
+	.form-wrap textarea {
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #222;
+		box-shadow: 1px 1px 1px #999;
+		outline: none;
+		background-color: #f1f1f1;
+		font-weight: bold;
+	}
+	.form-wrap input:focus,
+	.form-wrap textarea:focus {
+		background-color: #fff;
+	}
+
+	.form-wrap input[type="button"],
+	.form-wrap input[type="reset"] {
+		background-color: #e4e3d1;
+		margin: 5px 0;
+	}
+
+	.form-wrap input[type="button"]:hover,
+	.form-wrap input[type="reset"]:hover {
+		background-color: #fff;
+	}	
+
+	/* article */
+	.cv h1 {
+		width: 250px;
+		margin: 10px auto;
+
+	}
+		.cv-wrap {
+		display: flex;
+	}
+	.personal-info p{
+		color: #999;
+		font-size: 0.8em;
+
+	}
+
+		p#first_name,
+		p#second_name,
+		p#phone_number,
+		p#about_info {
+			color: #000;
+			font-size: 1.2em;
+		}
+
+			.image-part {
+				max-width: 300px;
+				text-align: center;
+			}
+				#image {
+					
+				}
+				#path-to-image {
+					color: #246;
+					background-color: #cee0f3;
+				}
+
+
+	/* /article */
+
+/* media */
+@media (max-width: 480px){
+	.cv-wrap {
+		flex-direction: column;
+		padding: 5px 10px;
+	}
+		.cv-wrap .personal-info {
+			margin-top: 10px;
+			border-top: 1px solid #444;
+			padding-top: 10px;
+		}
+			.image-part {
+				max-width: 100%;
+			}
+	.form-wrap {
+		width: 100%;
+	}
+	.form-wrap form {
+		width: 100%;
+	}
+		.form-wrap #btn-formview {
+			width: 100%;
+		}
+		.form-wrap input,
+		.form-wrap textarea {
+			width: 100%;
+		}
+}
+/* /media */
